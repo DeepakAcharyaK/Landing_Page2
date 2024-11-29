@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.main img{
+    height: 600px;
+    position: relative;
+    z-index: 99;
+}
+.scroll-div{
+    position: absolute;
+    top:20%;
+    white-space: nowrap;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.scroll-div::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div h1{
+    display: inline-block;
+    font-size: 150px;
+    font-family: "Notable", sans-serif;   
+    font-weight:100;
+    margin-right: 40px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.scroll-div2{
+    position: absolute;
+    top:40%;
+    white-space: nowrap;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    z-index: 100;
+}
+.text h1{    
+    font-family: "Notable", sans-serif;   
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+}
+.scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div2 h1{
+    display: inline-block;
+    font-size: 150px;
+    font-family: "Notable", sans-serif;   
+    font-weight:100;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    margin-right: 40px;
+
+}
+.scroll-div3{
+    position: absolute;
+    top:60%;
+    white-space: nowrap;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div3 h1{
+    display: inline-block;
+    font-size: 150px;
+    margin-right: 40px;
+    font-family: "Notable", sans-serif;   
+    font-weight:100;
+    animation-name: scroll2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.text{
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    z-index: 100;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 40px));
+    }
+}
+
+@keyframes scroll2 {
+    0%{
+        transform: translateX(calc(-100% - 40px));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
